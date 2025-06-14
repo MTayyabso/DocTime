@@ -15,7 +15,7 @@ import {
   Doctors,
   GenderOptions,
   IdentificationTypes,
-  PatientFormDefaultValues,
+  // PatientFormDefaultValues,
 } from "@/constants";
 import { registerPatient } from "@/lib/actions/patient.actions";
 import { PatientFormValidation } from "@/lib/validation";
