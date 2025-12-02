@@ -14,7 +14,7 @@ declare interface CreateUserParams {
   phone: string;
 }
 declare interface User extends CreateUserParams {
-  $id: string;
+  _id: string;
 }
 
 declare interface RegisterUserParams extends CreateUserParams {
