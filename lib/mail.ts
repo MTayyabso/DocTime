@@ -87,7 +87,7 @@ export const sendEmailNotification = async (
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: email,
-      subject: subject,
+      subject,
       html,
     };
 

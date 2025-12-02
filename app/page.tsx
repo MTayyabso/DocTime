@@ -18,7 +18,7 @@ const Home = ({ searchParams }: SearchParamProps) => {
             height={1000}
             width={1000}
             alt="patient"
-            className="mb-8 h-24 w-fit ml-[-23px]"
+            className="ml-[-23px] mb-8 h-24 w-fit"
           />
 
           <PatientForm />
@@ -39,7 +39,7 @@ const Home = ({ searchParams }: SearchParamProps) => {
         height={1000}
         width={1000}
         alt="patient"
-        className="hidden h-[139%] object-cover md:block max-w-[50%]"
+        className="hidden max-w-[50%] h-[139%] object-cover md:block"
       />
     </div>
   );
