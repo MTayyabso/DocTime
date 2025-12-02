@@ -3,12 +3,11 @@
 import { revalidatePath } from "next/cache";
 
 import { Appointment } from "@/types/appwrite.types";
-
-import connectDB from "../mongodb";
+import { sendEmailNotification, EmailTemplate } from "../mail";
 import AppointmentModel from "../models/Appointment";
+import connectDB from "../mongodb";
 import { formatDateTime, parseStringify } from "../utils";
 import { getUser } from "./patient.actions";
-import { sendEmailNotification, EmailTemplate } from "../mail";
 
 //  CREATE APPOINTMENT
 export const createAppointment = async (

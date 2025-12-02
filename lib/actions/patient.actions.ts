@@ -1,9 +1,9 @@
 "use server";
 
-import connectDB from "../mongodb";
-import User from "../models/User";
-import Patient from "../models/Patient";
 import { uploadIdentificationDocument } from "../cloudinary";
+import Patient from "../models/Patient";
+import User from "../models/User";
+import connectDB from "../mongodb";
 import { parseStringify } from "../utils";
 
 // CREATE USER
