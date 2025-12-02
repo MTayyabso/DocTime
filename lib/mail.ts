@@ -72,7 +72,7 @@ export const EmailTemplate = (content: string) => {
 export const sendEmailNotification = async (
   email: string,
   subject: string,
-  content: string
+  html: string
 ) => {
   try {
     const transporter = nodemailer.createTransport({
@@ -88,7 +88,7 @@ export const sendEmailNotification = async (
       from: process.env.EMAIL_USER,
       to: email,
       subject: subject,
-      html: content,
+      html,
     };
 
     const info = await transporter.sendMail(mailOptions);
