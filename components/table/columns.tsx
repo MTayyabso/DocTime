@@ -18,11 +18,11 @@ export const columns: ColumnDef<Appointment>[] = [
     },
   },
   {
-    accessorKey: "patients",
+    accessorKey: "patient",
     header: "Patients",
     cell: ({ row }) => {
       const appointment = row.original;
-      return <p className="text-14-medium ">{appointment.patients?.name}</p>;
+      return <p className="text-14-medium ">{appointment.patient?.name}</p>;
     },
   },
   {
@@ -82,7 +82,7 @@ export const columns: ColumnDef<Appointment>[] = [
       return (
         <div className="flex gap-1">
           <AppointmentModal
-            patientId={appointment.patients?.$id}
+            patientId={appointment.patient?._id}
             userId={appointment.userId}
             appointment={appointment}
             type="schedule"
@@ -90,7 +90,7 @@ export const columns: ColumnDef<Appointment>[] = [
             description="Please confirm the following details to schedule."
           />
           <AppointmentModal
-            patientId={appointment.patients?.$id}
+            patientId={appointment.patient?._id}
             userId={appointment.userId}
             appointment={appointment}
             type="cancel"
